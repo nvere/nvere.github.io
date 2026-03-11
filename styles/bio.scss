@@ -44,17 +44,17 @@
         background-position: right center;
         display: flex;
         @include mobile{
-            height: 26vh;
+            height: 10vh;
             margin-top: 1.5rem;
 
             
         }
         @include tablet{
-            height: 42vh;
+            height: 20vh;
 
         }
         @include desktop{
-            height: 60vh;
+            height: 20vh;
 
         }
 

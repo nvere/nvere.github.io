@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TNicolette Vere Portfolio- Projects</title>
-    <link href="../styles/projects.css" rel="stylesheet">
+    <title>Nicolette Vere Portfolio - Projects</title>
+    <link href="../styles/bio.css" rel="stylesheet">
     <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
-   
+    <link rel="stylesheet" href="https://pyscript.net" />
+    <script defer src="https://pyscript.net"></script>
 
 </head>
 <body>
@@ -14,8 +15,7 @@
         <a class="nav-bar__link" href="../index.html" alt="bio page"><h1 class="nav-bar__title">NVERE</h1></a> <!-- only instace of h1 tag on this page on most importantt title -->
         <nav class="nav-bar__options">
             <ul class="nav-bar__list">
-                <a href="../index.html"><li class="nav-bar__item">Overview</li></a>
-                <a href="../pages/games.html"><li class="nav-bar__item">Games</li></a>
+                <a href="../index.html"><li class="nav-bar__item">Games</li></a>
                 <a href="../pages/projects.html"><li class="nav-bar__item nav-bar__item--selected">Code Projects</li></a>
                 <a href="../pages/art.html"><li class="nav-bar__item">Art/Asset Creation</li></a>
             </ul>
@@ -25,17 +25,22 @@
 
 
     <main class="content"> 
-        <section class="content__introduction">
-            <h2 class="content__title">Non Game Projects</h2>
+
+        <section class="hero__code">
+            <div class="hero__overlay"><h2 class="hero__band-name">Non Game Projects</h2></div>
+        </section>
+        <py-script src="./app.py"></py-script>
+
+        <section class="content__image-dividers">
+            <h2 class="content__photo-title">Global Population Interactive 3D Web Application</h2>
+            <a href='https://github.com/nvere/global-population-globe'><h2 class="content__title2">Github</h2></a>
         </section>
 
+        <section class="content__image-dividers">
+            <h2 class="content__photo-title">This portfolio website</h2>
+            <a href='https://github.com/nvere/nvere.github.io'><h2 class="content__title2">Github</h2></a>
+        </section>
 
-        <section class="content__photo-gallery">
-
-            <section class="content_image-dividers">
-                <h2 class="content__photo-title">Photo Gallery</h2>
-                <h2 class="content__photo-title">Photo Gallery</h2>
-            </section>
 
         </section>
 
