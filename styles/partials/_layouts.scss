@@ -1,0 +1,157 @@
+
+
+@import "./fonts";
+
+
+
+$band-site-black: #323232;
+$silver: #AFAFAF;
+$band-site-dark-black: #000000;
+$mercury: #E1E1E1;
+//DESKTOP AND TABLET: text styles
+
+//page header
+$desktop-page-header-text-size: 3.75rem;
+$desktop-page-header-line-height: 2.75rem;
+$desktop-page-header-text-weight: 700;
+
+//section header
+$desktop-section-header-text-size: 2.25rem;
+$desktop-section-header-line-height: 2.75rem;
+$desktop-section-header-text-weight: 700;
+
+//subheader
+$desktop-subheader-text-size: 1.5rem;
+$desktop-subheader-line-height: 2rem;
+$desktop-subheader-text-weight: 600;
+
+//body copy
+$desktop-body-copy-text-size: 0.875rem;
+$desktop-body-copy-line-height: 1.375rem;
+$desktop-body-copy-text-weight: 400;
+
+//footer copy
+$desktop-footer-copy-text-size: 0.875rem;
+$desktop-footer-copy-line-height: 1.25rem;
+$desktop-footer-copy-text-weight: 400;
+
+//labels and buttons
+$desktop-labels-text-size: 0.75rem;
+$desktop-labels-line-height: 1.25rem;
+$desktop-labels-text-weight: 700;
+
+
+
+//MOBILE: text styles
+
+//page header
+$mobile-page-header-text-size: 1.5rem;
+$mobile-page-header-line-height: 2rem;
+$mobile-page-header-text-weight: 700;
+
+//section header
+$mobile-section-header-text-size: 1.5rem;
+$mobile-section-header-line-height: 2rem;
+$mobile-section-header-text-weight: 700;
+
+//subheader
+$mobile-subheader-text-size: 0.875rem;
+$mobile-subheader-line-height: 1.375rem;
+$mobile-subheader-text-weight: 600;
+
+//body copy
+$mobile-body-copy-text-size: 0.8125rem;
+$mobile-body-copy-line-height: 1.125rem;
+$mobile-body-copy-text-weight: 400;
+
+//footer copy
+$mobile-footer-copy-text-size: 0.8125rem;
+$mobile-footer-copy-line-height: 1.125rem;
+$mobile-footer-copy-text-weight: 400;
+
+//labels and buttons
+$mobile-labels-text-size: 0.625rem;
+$mobile-labels-line-height: 1.25rem;
+$mobile-labels-text-weight: 700;
+
+
+
+//DESKTOP: layout grid
+$desktop-columns:3.9375rem;
+$desktop-gutters: 1.5rem;
+$desktop-margins: auto;
+$desktop-min: 1280px; //screen size
+
+
+
+//TABLET: layout grid
+$tablet-columns: auto;
+$tablet-gutters: 1.5rem;
+$tablet-margins: 2.25rem;
+$tablet-min: 768px; //screen size
+$tablet-max: 1279px; //screen size
+
+
+
+//MOBILE: layout grid
+$mobile-colums: auto;
+$mobile-gutters: 1rem;
+$mobile-margins: 1rem;
+$mobile-min:320px; //screen size
+$mobile-max:767px; //screen size
+
+
+
+//DESKTOP AND TABLET: padding
+$desktop-padding-before-headlines: 3rem;
+$desktop-padding-after-headlines: 2.25rem;
+$desktop-padding-between-components: 2.25rem;
+
+
+
+//MOBILE: padding
+$mobile-padding-before-headlines: 1.5rem;
+$mobile-padding-after-headlines: 1rem;
+$mobile-padding-between-components: 1rem;
+
+
+
+//SOCIAL ICONS
+$social-icons-background: $band-site-black;
+
+
+
+//BANDSITE LOGO
+$bandsite-logo-background: $band-site-black;
+$bandsite-logo-max-width: 120px;
+$bandsite-logo-max-height: 20px;
+
+
+
+//PRIMARY CTA: DEFAULT
+$primary-cta-default-background: $band-site-black;
+$primary-cta-default-text-color: #FFFFFF;
+
+
+//PRIMARY CTA: HOVER
+$primary-cta-hover-background: $band-site-dark-black;
+
+
+
+//CTA BUTTON
+$cta-button-height: 40px;
+$desktop-cta-button-min-width: 150px;
+$desktop-cta-button-min-padding: 2rem;
+$mobile-cta-button-width: auto;
+$cta-button-radius: 4px;
+
+
+
+//DIVIDER
+$divider-stroke-width: 1px;
+$divider-fill-color: $mercury;
+
+
+
+//HERO IMAGE
+$hero-image-overlay: #32323250;

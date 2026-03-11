@@ -1,0 +1,461 @@
+@import "./layouts";
+
+@import "./fonts";
+
+
+@mixin mobile{
+    @media (min-width: $mobile-min) and (max-width: $mobile-max){
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media (min-width: $tablet-min) and (max-width: $tablet-max){
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media (min-width: $desktop-min){
+        @content;
+    }
+}
+
+@mixin padding-mobile{
+    padding-top: $mobile-padding-before-headlines;
+    padding-bottom: $mobile-padding-after-headlines;
+    padding-left: $mobile-padding-between-components;
+    padding-right: $mobile-padding-between-components;
+}
+
+@mixin padding-desktop{
+    padding-top: $desktop-padding-before-headlines;
+    padding-bottom: $desktop-padding-after-headlines;
+    padding-left: $desktop-padding-between-components;
+    padding-right: $desktop-padding-between-components;
+}
+
+
+//ALL PAGES
+
+@mixin include-in-all{
+    font-family:"Avenir Next Pro Lt";
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    line-height: 150%;
+    
+}
+
+
+
+//HEADER
+
+@mixin navigation-bar{
+    background-color: $band-site-black;
+    display: flex;
+    flex-direction: column;
+    height: 7.5vh;
+
+    @include tablet(){
+        flex-direction: row;
+        height: 7vh;
+
+    }
+    @include desktop(){
+        flex-direction: row;
+        height: 10vh;
+
+    }
+}
+
+@mixin navigation-bar-title{
+        color: white;
+        display: flex;
+        justify-content: center;
+        font-size: 2rem;
+        font-weight: 200; 
+        
+        @include mobile{
+           
+            padding-top: $mobile-padding-before-headlines;
+            padding-bottom: $mobile-padding-after-headlines;
+
+            padding-left: $mobile-padding-between-components;
+
+        }
+        @include tablet{
+            @include padding-mobile();
+
+            //@include padding-desktop();
+            margin-left: 1rem;
+            margin-right: 4rem;
+            align-items: center;
+            font-size: 1.5rem;
+
+        }
+        @include desktop{
+            margin-left:4rem;
+            margin-right: 0rem;
+            align-items: center;
+            padding-top:2rem;
+        }
+    }
+
+@mixin navigation-bar-list{
+        display: flex;
+        list-style: none;
+        flex-direction: row;
+
+       
+        
+
+        @include mobile{
+            align-items: flex-start;
+            background-color: $band-site-black;
+            height: 4vh;
+
+            
+        }
+
+        @include tablet{
+            justify-content: flex-end;
+            align-items: flex-end;
+
+            
+        }
+        
+        @include desktop{
+            justify-content: flex-end;
+            align-items: flex-end;
+            height: 7vh;
+        }
+    }
+
+
+
+
+@mixin navigation-bar-item{
+        color: $silver;
+
+        display: flex;
+
+        @include mobile{
+            height: 3vh;
+            justify-content: center;
+            padding-bottom: 2rem;
+            width:50vw;
+            
+        }
+        @include tablet{
+            height: 4vh;
+            margin-right: 2rem;
+             margin-left: 2rem;
+        }
+        @include desktop{
+            
+            height: 4.5vh;
+            margin-right: 2rem;
+            margin-left: 2rem;    
+            padding-bottom: 3rem;
+
+        }
+  
+}
+
+@mixin navigation-bar-item-selected{
+            color: white;
+            @include mobile{
+                border-bottom: 3px white solid;
+                width: 50vw;
+
+            }
+            @include tablet{
+                width: auto;
+
+                border-bottom: 3px white solid;
+            }
+            @include desktop{
+                width: auto;
+
+                border-bottom: 3px white solid;
+                
+            }
+        }
+
+@mixin navigation-bar-options{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    @include mobile{
+        height: 2vh;   
+        width: 97.5vw;
+     
+    }
+    @include desktop{
+            justify-content: flex-end;
+
+    }
+}
+    
+@mixin navigation-bar-link{
+    text-decoration: none;
+}
+
+   
+    
+
+
+
+
+
+
+
+
+
+// FOOTER//
+
+
+
+@mixin footer-information{
+    background-color: $band-site-black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+
+@mixin footer-information-copyright-section{
+        display: flex;
+
+        @include mobile{
+            flex-direction: column;
+        }
+        @include tablet{
+            flex-direction: row;
+
+        }
+        @include desktop{
+            flex-direction: row;
+        }
+    }
+
+@mixin footer-information-content{
+        display: flex;
+        flex-direction: column;
+
+        @include mobile{
+            @include padding-mobile();
+
+        }
+        @include tablet{
+            @include padding-desktop();
+
+        }
+        @include desktop{
+            @include padding-desktop();
+
+        }
+    }
+
+
+@mixin footer-information-content-sections{
+        display: flex;
+        @include mobile{
+            flex-direction: column;
+        }
+        @include tablet{
+            flex-direction: row;
+            
+
+        }
+        @include desktop{
+            flex-direction: row;
+
+        }
+
+    }
+
+@mixin footer-information-get-in-touch{
+        display: flex;
+        @include mobile{
+            flex-direction: column;
+
+        }
+        @include tablet{
+            flex-direction: row;
+
+        }
+        @include desktop{
+            flex-direction: row;
+
+        }
+        
+    }
+
+@mixin footer-information-get-in-touch-title{
+        @include mobile{
+            padding-top: $mobile-padding-before-headlines;
+            padding-bottom: $mobile-padding-after-headlines;
+        }
+        @include tablet{
+            padding-top: $desktop-padding-before-headlines;
+            padding-bottom: $desktop-padding-after-headlines;
+        }
+        @include desktop{
+            padding-top: $desktop-padding-before-headlines;
+            padding-bottom: $desktop-padding-after-headlines;
+        }
+    }
+
+@mixin footer-information-socials{
+        @include mobile{
+            padding-top: $mobile-padding-before-headlines;
+            padding-bottom: $mobile-padding-after-headlines;
+            width: 50%;
+
+        }
+        @include tablet{
+            padding-left: $desktop-padding-between-components;
+
+            padding-top: $desktop-padding-before-headlines;
+            padding-bottom: $desktop-padding-after-headlines;
+            width: 65%;
+
+            
+        }
+        @include desktop{
+            padding-left: $desktop-padding-between-components;
+
+            padding-top: $desktop-padding-before-headlines;
+            padding-bottom: $desktop-padding-after-headlines;
+            width: 70%;
+
+        }
+    }
+
+@mixin footer-information-social-icon{
+        @include mobile{
+            
+            padding-right: 2rem;
+            height: 3vh;
+        }
+        @include tablet{
+            padding-right: $desktop-padding-between-components;
+            height: 3vh;
+            
+        }
+        @include desktop{
+            padding-right: $desktop-padding-between-components;
+            height: 4vh;
+        }
+    }
+
+
+@mixin footer-information-management{
+        @include mobile{
+            padding-top: $mobile-padding-after-headlines;
+            padding-bottom: $mobile-padding-after-headlines;
+        }
+        @include tablet{
+            padding-bottom: $desktop-padding-after-headlines;
+            width: 31vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        @include desktop{
+            padding-bottom: $desktop-padding-after-headlines;
+            width: 25vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+        }
+    }
+
+@mixin footer-information-management-title{
+        @include mobile{
+            padding-top: $mobile-padding-after-headlines;
+
+            padding-bottom: $mobile-padding-after-headlines;
+        }
+        @include tablet{
+            padding-bottom: $desktop-padding-after-headlines;
+        }
+        @include desktop{
+            padding-bottom: $desktop-padding-after-headlines;
+        }
+    }
+
+@mixin footer-information-management-email{
+        @include mobile{
+            padding-top: $mobile-padding-after-headlines;
+        }
+        @include tablet{
+            padding-top: $desktop-padding-after-headlines;
+        }
+        @include desktop{
+            
+            padding-top: $desktop-padding-after-headlines;
+        }
+    }
+
+@mixin footer-information-copyright{
+        @include mobile{
+            @include padding-mobile();
+        }
+ 
+     }
+
+@mixin footer-information-copyright-title{
+        @include mobile{
+            padding-top: $mobile-padding-before-headlines;
+            font-weight: 300;
+            padding-bottom: $mobile-padding-after-headlines;
+        }
+        @include tablet{
+            height: 0%; 
+            font-size: 0rem;  
+        }
+        @include desktop{
+            height: 0%; 
+            font-size: 0rem;      
+        }
+    }
+
+@mixin footer-information-copyright-title-desktop{
+        @include mobile{
+            height: 0%; 
+            font-size: 0rem;  
+        }
+        @include tablet{
+            padding-top: $desktop-padding-before-headlines;
+    
+            padding-bottom: $desktop-padding-after-headlines;        
+        }
+        @include desktop{
+            padding-top: $desktop-padding-before-headlines;
+    
+            padding-bottom: $desktop-padding-after-headlines;      
+        }
+    }
+
+@mixin footer-information-copyright-title-content{
+
+        @include mobile{
+            padding-top: $mobile-padding-before-headlines;
+            padding-bottom: $mobile-padding-after-headlines;     
+        }
+        @include tablet{
+            padding-top: $desktop-padding-before-headlines;
+            padding-bottom: $desktop-padding-after-headlines;   
+        }
+        @include desktop{
+            padding-top: $desktop-padding-before-headlines;
+    
+            padding-bottom: $desktop-padding-after-headlines; 
+        }
+    }
+
