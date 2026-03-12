@@ -441,6 +441,15 @@ body{
 
 }
 
+
+.content__game3 {
+  font-weight: normal;
+  font-size: 1rem;
+  background-color: #FFFFFF;
+
+
+}
+
 .content__title2 {
   font-weight: normal;
   background-color: #FAFAFA;
@@ -503,7 +512,7 @@ body{
 }
 
 .content__succulents{
-  height: 65vh;
+  height: 80vh;
 }
 @media (min-width: 320px) and (max-width: 767px) {
   .content__succulents {
@@ -522,8 +531,8 @@ body{
 @media (min-width: 1280px) {
   .content__succulents {
     display: flex;
-    padding-left: 30rem;
-    padding-right: 30rem;
+    padding-left: 22rem;
+    padding-right: 22rem;
 
     width: 100%;
 
@@ -796,8 +805,9 @@ body{
   .content__photo-gallery2 {
     display: flex;
     flex-direction: row;
-    padding-bottom: 2.25rem;
-    padding-right: 2.25rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-bottom: 1rem;
   }
 }
 @media (min-width: 1280px) {
@@ -847,6 +857,69 @@ body{
     padding-left: 8rem;
   }
 }
+
+.content__photo-title2 {
+  background-color: #FAFAFA;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .content__photo-title2 {
+    padding-top: 1.5rem;
+    padding-right: 1rem;
+    font-size: 2rem;
+    font-style: bold;
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .content__photo-title2 {
+    padding-top: 3rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-style: bold;
+  }
+}
+@media (min-width: 1280px) {
+  .content__photo-title2 {
+    padding-right: 2.25rem;
+    font-size: 2rem;
+    margin-top: 1rem;
+    font-style: bold;
+
+  }
+}
+
+.content__photo-title2 {
+  background-color: #FAFAFA;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .content__photo-title3 {
+    padding-top: 1.5rem;
+    padding-right: 1rem;
+    font-size: 2rem;
+    font-style: bold;
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .content__photo-title3 {
+    padding-top: 3rem;
+    font-size: 1rem;
+    font-weight: 700;
+    font-style: bold;
+    width: 8rem;
+
+  }
+}
+@media (min-width: 1280px) {
+  .content__photo-title3 {
+    padding-right: 2.25rem;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    font-style: bold;
+    width: 9rem;
+
+  }
+}
+
+
 .content__photo {
   background-size: cover;
 }
@@ -901,6 +974,9 @@ body{
 
 .content__photo3 {
   background-size: cover;
+  background-color: #FFFFFF;
+  
+
 }
 @media (min-width: 320px) and (max-width: 767px) {
   .content__photo3 {
@@ -918,13 +994,45 @@ body{
 }
 @media (min-width: 1280px) {
   .content__photo3 {
-    height: 16rem;
-    width: 24rem;
+    height: 10rem;
+    width: 14rem;
     margin-right: 1rem;
     margin-left: 1rem;
 
   }
 }
+
+.content__photo4 {
+  background-size: cover;
+  background-color: #FFFFFF;
+  
+
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .content__photo4 {
+    padding-top: 0.85rem;
+    height: 14rem;
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .content__photo4 {
+    height: 18rem;
+    width: 23rem;
+    margin-bottom: 5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .content__photo4 {
+    height: 16rem;
+    width: 21rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+
+  }
+}
+
+
 
 
 @media (min-width: 1280px) {
