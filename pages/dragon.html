@@ -39,11 +39,34 @@
         
 
         <section class="content_image-dividers">
-                <h2 class="content__photo-title">Techical Information</h2>
+                <h2 class="content__photo-title">Github Information</h2>
                 <a href='https://github.com/nvere/lofi-dragon'><h2 class="content__title2">Github</h2></a>
             </section>
 
-       
+        <section class="content__image-dividers">
+                <h2 class="content__photo-title">Game Overview</h2>
+                <h2 class="content__title2">Overview</h2>
+                <h3 class="content__game4"> LofiDragon is a Unity2d game programmed in C# with assets drawn and animated in Adobe Fresco. It is a relaxing game with three game modes where the player clicks on a falling star to bounce it to avoid it falling and waking the dragon. There is a limitless mode with one star meant for relaxing play. There is a timed mode where more stars appear to juggle and a top score is stored. There is also a cloud popping mode where the player must bounce the star into clouds and a score of the most clouds popped is stored. All game modes are set to relaxing Lofi music. </h3>
+
+                <h2 class="content__title2">Credits</h2>
+                <h3 class="content__game4"> Nicolette Vere - Gameplay programmer, created assets in Adobe Fresco, designed gameplay and programmed all, everything except writing the music.</h3>
+                <h3 class="content__game4"> Music free to use</h3>
+
+        </section>
+
+        <section class="content__image-dividers">
+                <h2 class="content__photo-title">Technical Information</h2>
+                <h2 class="content__title2">Tech Stack</h2>
+                    <h3 class="content__game4">Unity 2D, C#, and Adobe Fresco for assset creation and animation</h3>
+
+                <h2 class="content__title2">Technical Challenge</h2>
+                    <h3 class="content__game4"> This was my first full game created to learning Unity in general was a big learning curve. Within the game, a challenge I faced was getting clouds to spawn far enough away from previous spawn but still seemingly random.</h3>
+                    <h3 class="content__game4"> When first building the game I had allowed for clouds in the cloud gameplay mode to spawn anywhere on screen. But I found that often, since phone screens are relatively small, clouds would spawn very clouse to the previously popped ones location. This would cause the star which has just bounced off the popped one to hit the new cloud without any player intervention needed. This would cause the star to start bouncing seemingly out of the control off the newly spawing clouds and create confusing gameplay. I stopped this by tracking the mostly recently popped cloud position and setting the new spawn location to have to be a certain distance away from the previous spawn. I would continue generating potential spawn points for the new cloud until one met the conditions of being far enough away from the previous cloud. </h3>
+                    <img class="content__photo5" src="../assets/images/popCloud.jpg" alt="popCloud Code">
+
+
+
+        </section>  
 
     
 

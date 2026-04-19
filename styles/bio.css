@@ -450,6 +450,16 @@ body{
 
 }
 
+.content__game4 {
+  font-weight: normal;
+  font-size: 1rem;
+  background-color: #FFFFFF;
+  padding-left: 4.25rem;
+  padding-right: 2.25rem;
+  margin-left: 7rem;
+
+}
+
 .content__title2 {
   font-weight: normal;
   background-color: #FAFAFA;
@@ -1032,8 +1042,68 @@ body{
   }
 }
 
+.content__photo5 {
+  background-size: cover;
+  background-color: #FFFFFF;
+  
+
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .content__photo5 {
+    padding-top: 0.85rem;
+    height: 14rem;
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .content__photo5 {
+    height: 18rem;
+    width: 23rem;
+    margin-bottom: 5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .content__photo5 {
+    height: 100rem;
+    width: 85rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    padding-left: 10rem;
 
 
+  }
+}
+.content__photo6 {
+  background-size: cover;
+  background-color: #FFFFFF;
+  
+
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .content__photo6 {
+    padding-top: 0.85rem;
+    height: 14rem;
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .content__photo6 {
+    height: 18rem;
+    width: 23rem;
+    margin-bottom: 5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .content__photo6 {
+    height: 35rem;
+    width: 45rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    padding-left: 10rem;
+
+
+  }
+}
 
 @media (min-width: 1280px) {
   .content_image-dividers2 {
