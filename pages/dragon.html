@@ -11,7 +11,7 @@
 </head>
 <body>
     <header class="nav-bar">
-        <a class="nav-bar__link" href="../index.html" alt="bio page"><h1 class="nav-bar__title">NVERE</h1></a> <!-- only instace of h1 tag on this page on most importantt title -->
+        <a class="nav-bar__link" href="../index.html" alt="bio page"><h1 class="nav-bar__title">NVERE</h1></a> <!-- only instance of h1 tag on this page on most important title -->
         <nav class="nav-bar__options">
             <ul class="nav-bar__list">
                 <a href="../index.html"><li class="nav-bar__item nav-bar__item--selected">Games</li></a>
@@ -49,7 +49,7 @@
                 <h3 class="content__game4"> LofiDragon is a Unity2d game programmed in C# with assets drawn and animated in Adobe Fresco. It is a relaxing game with three game modes where the player clicks on a falling star to bounce it to avoid it falling and waking the dragon. There is a limitless mode with one star meant for relaxing play. There is a timed mode where more stars appear to juggle and a top score is stored. There is also a cloud popping mode where the player must bounce the star into clouds and a score of the most clouds popped is stored. All game modes are set to relaxing Lofi music. </h3>
 
                 <h2 class="content__title2">Credits</h2>
-                <h3 class="content__game4"> Nicolette Vere - Gameplay programmer, drew and animated assets in Adobe Fresco, designed gameplay and programmed all, everything except writing the music.</h3>
+                <h3 class="content__game4"> Nicolette Vere - Gameplay programmer, artist, and designer, everything except writing the music.</h3>
                 <h3 class="content__game4"> Music free to use</h3>
 
         </section>
@@ -57,13 +57,16 @@
         <section class="content__image-dividers">
                 <h2 class="content__photo-title">Technical Information</h2>
                 <h2 class="content__title2">Tech Stack</h2>
-                    <h3 class="content__game4">Unity 2D, C#, and Adobe Fresco for assset creation and animation</h3>
+                    <h3 class="content__game4">Unity 2D, C#, and Adobe Fresco for asset creation and animation</h3>
 
-                <h2 class="content__title2">Technical Challenge</h2>
-                    <h3 class="content__game4"> This was my first full game created to learning Unity in general was a big learning curve. Within the game, a challenge I faced was getting clouds to spawn far enough away from previous spawn but still seemingly random.</h3>
-                    <h3 class="content__game4"> When first building the game I had allowed for clouds in the cloud gameplay mode to spawn anywhere on screen. But I found that often, since phone screens are relatively small, clouds would spawn very clouse to the previously popped ones location. This would cause the star which has just bounced off the popped one to hit the new cloud without any player intervention needed. This would cause the star to start bouncing seemingly out of the control off the newly spawing clouds and create confusing gameplay. I stopped this by tracking the mostly recently popped cloud position and setting the new spawn location to have to be a certain distance away from the previous spawn. I would continue generating potential spawn points for the new cloud until one met the conditions of being far enough away from the previous cloud. </h3>
-                    <img class="content__photo5" src="../assets/images/popCloud.jpg" alt="popCloud Code">
+                <h2 class="content__title2">Technical Challenges</h2>
+                    <h3 class="content__game4"> This was the first full game I created, so in general it was a big learning curve. Within the game, one interesting challenge I faced was getting clouds within the "Cloud" mode to spawn appropriately far from previous clouds while still 
+                         random.</h3>
+                    <h3 class="content__game4"> When first building the game I had allowed for clouds in the cloud gameplay mode to spawn anywhere on screen. But I found that often, since phone screens are relatively small, clouds would spawn very close to the previously popped ones location. This would cause the star which has just bounced off the popped one to hit the new cloud without any player intervention needed. This would cause the star to start bouncing seemingly out of the control off the newly spawning clouds and create confusing gameplay. I stopped this by tracking the mostly recently popped cloud position and setting the new spawn location to have to be a certain distance away from the previous spawn. I would continue generating potential spawn points for the new cloud until one met the conditions of being far enough away from the previous cloud. </h3>
+                    <img class="content__photo6" src="../assets/images/popCloud.jpg" alt="popCloud Code">
 
+                    <h3 class="content__game4">I also wanted high score information to persist between game sessions. To accomplish this I used Unity's built in system: PlayerPrefs. I used this system to get previously locally saved high scores to display and compare against. I also used PlayerPrefs to update high scores when a new high score was achieved. </h3>
+                    <img class="content__photo6" src="../assets/images/savescore.jpg" alt="set cloud high score Code">
 
 
         </section>  

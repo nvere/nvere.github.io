@@ -11,7 +11,7 @@
 </head>
 <body>
     <header class="nav-bar">
-        <a class="nav-bar__link" href="../index.html" alt="bio page"><h1 class="nav-bar__title">NVERE</h1></a> <!-- only instace of h1 tag on this page on most importantt title -->
+        <a class="nav-bar__link" href="../index.html" alt="bio page"><h1 class="nav-bar__title">NVERE</h1></a>
         <nav class="nav-bar__options">
             <ul class="nav-bar__list">
                 <a href="../index.html"><li class="nav-bar__item nav-bar__item--selected">Games</li></a>
@@ -29,6 +29,7 @@
             <div class="hero__overlay"><h2 class="hero__band-name">Song of Succulents</h2></div>
         </section>
         <iframe class="content__succulents" src="https://songofsucculents.netlify.app/" title="Song of Succulents Web Game"></iframe> 
+        <h2 class="content__title2">Embedded Song of Succulents Web game - fully playable above - please click login to start, can use username:test and password:test if you don't want to signup </h2>
 
 
         <section class="content__image-dividers">
@@ -41,10 +42,10 @@
         <section class="content__image-dividers">
                 <h2 class="content__photo-title">Game Overview</h2>
                 <h2 class="content__title2">Overview</h2>
-                <h3 class="content__game4"> The Song of Succulents is an idle game where players can build a 3D musical succulent garden. Place musical plants in your garden and earn points daily. Each plant plays a different piece of a song that all planys collectively play. Some plants even dance along. Plants that are in the pot grow coins over time but the user must press a button to collect them. New plants can be purchased from the store.  Use username: test password: test to check it out wihtout signing up or create an account.</h3>
+                <h3 class="content__game4"> The Song of Succulents is an idle game where players can build a 3D musical succulent garden. Place musical plants in your garden and earn points over time. Each plant plays a different part of one overall cohesive song. Some plants even dance along. Plants that are in the pot grow coins over time, and the user must press a button to collect them. New plants can be purchased from the store.  Use username: test password: test to check it out without signing up, or create an account.</h3>
 
                 <h2 class="content__title2">Credits</h2>
-                <h3 class="content__game4"> Nicolette Vere - Programmed frontend and backend, created assets in Blender and Adobe Fresco, designed gameplay, everything except writing the music.</h3>
+                <h3 class="content__game4"> Nicolette Vere - Game programmer, artist, and designer, everything except writing the music.</h3>
                 <h3 class="content__game4"> Music by Roman Belov from Pixabay</h3>
 
         </section>
@@ -52,17 +53,31 @@
         <section class="content__image-dividers">
                 <h2 class="content__photo-title">Technical Information</h2>
                 <h2 class="content__title2">Tech Stack</h2>
-                    <h3 class="content__game4">React, JavaScript, MySQL, Express, Three.js</h3>
+                    <h3 class="content__game4">React, JavaScript, MySQL, Express, Three.js, Blender and Adobe Fresco for assets</h3>
                     <h3 class="content__game4">Client libraries: react, react-router, axios</h3>
                     <h3 class="content__game4"> Server libraries: knex, express, bcrypt for password hashing</h3>
-                <h2 class="content__title2">Technical Challenge</h2>
-                    <h3 class="content__game4"> A challenge I faced was getting the song pieces and dancing to align no matter when a new plant was planted in the pot.</h3>
-                    <h3 class="content__game4"> While it easy to have all plants a player already owned aligned, it was difficult to align the music of a newly placed plant since even miliseconds of delayed caused the new part of the song to sound off. I decided the best solution was the have all of the music available for purchase always playing from the start of the game. All song parts associated with plants available to purchase would start up on game load together, but be muted. Then pieces would be unmuted either autmatically as already potted plants were loaded in or as the player potted plants from their inventory during gameplay.</h3>
-                    <img class="content__photo6" src="../assets/images/songplayer.jpg" alt="placePlant Code">
-                    <h3 class="content__game4"> For a newly placed plants, after the user clicked the plant button, the plant would be added to the pot and the dancing animation would be started by calling loadPlant in the placePlant fucntion in inventoryPlant.js. It would called loadPlant with a default starting position and the current time and unmute the associated music. </h3>
-                    <img class="content__photo5" src="../assets/images/placePlant.png" alt="placePlant Code">
-                    <h3 class="content__game4"> The loadPlant function in Pot.js was called that started the gltf animation starting at the provided current time. I found that the percision using current time allowed for the dancing the look aligned.</h3>
-                    <img class="content__photo5" src="../assets/images/loadplant.jpg" alt="placePlant Code">
+                <h2 class="content__title2">Technical Overview</h2>
+                    
+                    <h3 class="content__game4">I built The Song of Succulents as a full-stack web game using React on the frontend, Express and Knex on the backend, MySQL for data and game state persistence, and Three.js for the interactive game scene. Rather than treating it as a static browser game, I designed it as a persistent state driven system where each player's garden, plant placement, and coin generation data could be saved, restored, and updated across sessions.</h3>
+                  
+
+                    <h3 class="content__game4">To support data and game state persistence, I structured the backend around gameplay actions. The API stores and updates plant ownership, plant placement, user currency, and coin-generation timing through dedicated endpoints such as buying a plant, changing coin totals, updating plant position, and recording a generation start time. On login, the client requests the player's saved game state and rebuilds the garden from database data, including owned plants and their saved positions. This meant the frontend was reconstructing a personalized scene from server-side data.</h3>
+                    <img class="content__photo6" src="../assets/images/endpoints.jpg" alt="endpoints Code">
+
+                    <h3 class="content__game4">For plant placement, I used Three.js to represent the garden spatially and let players move plants within the pot. When a player repositions a plant, the client captures its x, y, and z coordinates and sends them to the backend, where they are stored and later reloaded. That required connecting interaction logic in the frontend to persistent database updates so that scene layout remained consistent between sessions.</h3>
+                    <img class="content__photo6" src="../assets/images/saveplantlocation.jpg" alt="save plant location Code">
+
+                    <h3 class="content__game4">For the idle game economy, I used a timestamp based approach instead of relying on constant background simulation. Each plant stores a start time for coin generation, and the game uses elapsed time to determine when coins should become available. This let me create the feel of ongoing progression while keeping the system lightweight and easier to manage than a continuously running simulation</h3>
+                    <img class="content__photo6" src="../assets/images/coincalc.jpg" alt="coin calculation Code">
+
+                    <h3 class="content__game4">I also built the project with authentication and user specific data in mind. I implemented registration and login endpoints, used bcrypt for password hashing, and added JWT authentication so that player data could be securely associated with individual accounts. On the client side, authentication state affects what data is loaded, making the game experience personalized and since players can their pot state and inventory.</h3>
+                    <img class="content__photo6" src="../assets/images/login.jpg" alt="login Code">
+
+                    <h3 class="content__game4">One of the more technically interesting parts of the project was designing the music behavior. Each plant contributes sound, and when plants are added or activated, their audio needs to work as part of a shared musical experience rather than as isolated sound effects. Even in the project planning stage, I treated this as a synchronization problem: the game needed to manage multiple plant sounds as part of one evolving composition. I did this by having all possible music parts always playing and unmuting and muting parts as plants were placed.</h3>
+                    <img class="content__photo6" src="../assets/images/songplayer.jpg" alt="songplayer Code">
+
+
+
 
 
         </section>
