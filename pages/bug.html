@@ -12,7 +12,7 @@
 </head>
 <body>
     <header class="nav-bar">
-        <a class="nav-bar__link" href="../index.html" alt="bio page"><h1 class="nav-bar__title">NVERE</h1></a> <!-- only instace of h1 tag on this page on most importantt title -->
+        <a class="nav-bar__link" href="../index.html" alt="bio page"><h1 class="nav-bar__title">NVERE</h1></a> 
         <nav class="nav-bar__options">
             <ul class="nav-bar__list">
                 <a href="../index.html"><li class="nav-bar__item nav-bar__item--selected">Games</li></a>
@@ -31,15 +31,10 @@
         <h2 class="content__photo-title">Itch.io Game Download</h2>
         <a href='https://aicalosse.itch.io/buggin-out'><h3 class="content__title2">Buggin' Out Game</h3></a>
 
-
-            <section class="content__image-dividers">
-                <h2 class="content__photo-title">Techical Information</h2>
-            </section>
-
         <section class="content__image-dividers">
                 <h2 class="content__photo-title">Game Overview</h2>
                 <h2 class="content__title2">Overview</h2>
-             <h3 class="content__game4">Buggin' Out is a Unreal Engine game that I created in two weeks for the Valentine's Day SkillUp Game jam https://itch.io/jam/valentines-skillup-game-jam. I unfortunately did not understand the exporting process and missed the deadline. But the majority of the game was built in two weeks. It is a casual rpg fitting the jam's theme of "death is not the end". The main character dies after a stressful work event and is reincarnated by death itself as a bug. Through island exploration and relaxing mini games the main character learns to enjoy life and relax. I used this game jam to learn Unreal Engine 3D and to start learning Blueprints. I only used free assets from the FAB store.</h3>
+             <h3 class="content__game4">Buggin' Out is an Unreal Engine game that I created in two weeks for the <a href='https://itch.io/jam/valentines-skillup-game-jam'>Valentine's Day SkillUp Game jam</a>. I unfortunately did not understand the exporting process and missed the deadline. But the majority of the game was built in two weeks. It is a casual rpg fitting the jam's theme of "death is not the end". The main character dies after a stressful work event and is reincarnated by death itself as a bug. Through island exploration and relaxing mini games the main character learns to enjoy life and relax. I used this game jam to learn Unreal Engine 3D and to start learning Blueprints. I only used free assets from the FAB store.</h3>
                 <h2 class="content__title2">Credits</h2>
              <h3 class="content__game4">Nicolette Vere - Gameplay programmer, artist, video editor, designer of everything except the music.</h3>
                 <h3 class="content__game4">Music written, played, and produced by Jonathan Hanson</h3>
@@ -51,13 +46,23 @@
                 <h2 class="content__title2">Tech Stack</h2>
                     <h3 class="content__game4">Unreal Engine 3D using Blueprints, Shotcut for video editing, and Adobe Fresco for opening video asset drawing.</h3>
 
-                <h2 class="content__title2">Interesting Systems Implemented</h2>
+                <h2 class="content__title2">Complex Systems Implemented Overview</h2>
                     <h3 class="content__game4">Dialogue System</h3>
                     <h3 class="content__game4">I needed a reusable system to easily make it so the main character could talk to NPCs. So I created a reusable dialogue system using Blueprints. NPCs could use dialogue functions to create individual dialogue tree options without needing to redo any base logic for displaying speaker dialogue, displaying options, and tracking conversation progression. I used this system for all NPCs in the game to quickly make dialogue trees for all characters.</h3>
-
+                    <img class="content__photo9" src="../assets/images/death.jpg" alt="login Code">
+                    <h3 class="content__game4">For example, here is the Death NPCs dialogue tree. You can see it overrides the dialogue function which allows the rest of the dialogue related functions I created to be used in the tree. The function AddDialogue is another I created that is used for displaying a new set of speaker dialogue and response options in reusable Widgets.</h3>
+                    <img class="content__photo9" src="../assets/images/dialogueOverwrite.jpg" alt="login Code">
 
                     <h3 class="content__game4">Painting System</h3>
                     <h3 class="content__game4">I wanted one of the mini games to be a creative game where a player could create a painting on an in game canvas and switch between multiple paint colors. To do this I created a painting system where a paint brush widget would be loaded in and right click was used to select paint can actors that updated texture for paint color. With a left click, a material with the selected color texture was rendered onto a canvas in game at the location the paint brush widget was pointing. This allowed for the user to select the paint can with the color they wanted to paint with and then point and paint on the canvas.</h3>
+                    <img class="content__photo9" src="../assets/images/bugginout.jpg" alt="login Code">
+
+                    <h3 class="content__game4">This is the blueprint code that updates the paintbrush "paint" color after a paint can is right clicked.</h3>
+                    <img class="content__photo9" src="../assets/images/paintsystem1.jpg" alt="paint system 1 Code">
+
+                    <h3 class="content__game4">This is the blueprint code that allows for the user to left click while pointing at the canvas and have the paint material rendered onto the canvas.</h3>
+                    <img class="content__photo9" src="../assets/images/paintsystem2.jpg" alt="login Code">
+
 
         </section>
 

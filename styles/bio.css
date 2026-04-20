@@ -1192,6 +1192,43 @@ body{
   }
 }
 
+
+.content__photo9 {
+  background-size: cover;
+  background-color: #FFFFFF;
+  
+
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .content__photo9 {
+    padding-top: 0.85rem;
+    height: 14rem;
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .content__photo9 {
+    height: 18rem;
+    width: 23rem;
+    margin-bottom: 5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .content__photo9 {
+    width: 80rem;
+    height: 45rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    padding-left: 10rem;
+
+
+  }
+}
+
+
+
+
+
 @media (min-width: 320px) and (max-width: 767px) {
   .comments {
     padding: 1rem 1rem;
