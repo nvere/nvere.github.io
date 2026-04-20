@@ -982,6 +982,32 @@ body{
   }
 }
 
+.content__photo8 {
+  background-size: cover;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .content__photo8 {
+    padding-top: 0.85rem;
+    height: 14rem;
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .content__photo8 {
+    padding-top: 1.5rem;
+    padding-left: 2.25rem;
+    height: 12rem;
+    width: 100%;
+  }
+}
+@media (min-width: 1280px) {
+  .content__photo8 {
+    padding: 1rem;
+    height: 35rem;
+    width: 40rem;
+  }
+}
+
 .content__photo3 {
   background-size: cover;
   background-color: #FFFFFF;
