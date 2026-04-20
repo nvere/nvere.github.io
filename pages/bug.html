@@ -39,13 +39,40 @@
         <section class="content__image-dividers">
                 <h2 class="content__photo-title">Game Overview</h2>
                 <h2 class="content__title2">Overview</h2>
+             <h3 class="content__game4">Buggin' Out is a Unreal Engine game that I created in two weeks from the Valentines Day SkillUp Game jam https://itch.io/jam/valentines-skillup-game-jam. I unforntunately did not understand the exporting process and missing the deadine. But the majority of the game was built in two weeks. It is a casual rpg fitting the jams theme of death is not the end. The main character dies after a stressful work event and is reincarnated by death itself as a bug. Through island exploration and relaxing mini games the main character learns to enjoy life and relax. I used this game jam to learn Unreal Engine 3D and starting learning Blueprints. I only used free to use assets from the FAB store.</h3>
                 <h2 class="content__title2">Credits</h2>
+             <h3 class="content__game4">Nicolette Vere - Gameplay programmer in Unreal Engine with Blueprints, drew video assets in Adobe Fresco, video editor with ShotCut, designed gameplay and world, everything except the music.</h3>
+                <h3 class="content__game4">Music written, played, and produced by Jonathan Hanson</h3>
+
         </section>
 
         <section class="content__image-dividers">
                 <h2 class="content__photo-title">Technical Information</h2>
                 <h2 class="content__title2">Tech Stack</h2>
+                    <h3 class="content__game4">Unreal Engine 3D using Blueprints, Shotcut for video editing, and Adobe Fresco for opening video asset drawing.</h3>
+
                 <h2 class="content__title2">Technical Breakdown</h2>
+                    <h3 class="content__game4">Dialogue System</h3>
+                    <h3 class="content__game4">I needed a reusuable system to easily make all NPCs interactable with dialogue. So I created a resuable dialogue system using Bluerprints, guided by videos by Michael Pattison. NPCs could override the dialogue function and have thier individual dialogue tree options without needing to redo any base logic. I used this system for all NPCs in the game.</h3>
+                    <img class="content__photo7" src="../assets/images/dialogueOverwrite.jpg" alt="NPC Code">
+
+                    <h3 class="content__game4">In this example the Death character NPC is overrides the base dialogue function which is empty. Then addDialogue is used to display dialogue from the speaker Death and display response options for the player to say. Once a player clicks on an answer associated with an number, the new new stage of the dialogue is shown based on the response using SwitchOnInt.</h3>
+                    <img class="content__photo7" src="../assets/images/addDialogue.jpg" alt="addDialogue Code">
+                    <h3 class="content__game4">The function addDialogue works by keeping track of a value stored in dialogue index. As more dialogue is added that number is increased. It is then compared to dialogue progress had one added to it each time the dialogue progresses. This check allows for if this dialogue has already been said for it it be skipped and if it has not yet been said for UpdateDialogueText to be called. </h3>
+                    <img class="content__photo7" src="../assets/images/updateDialogueText.jpg" alt="updateDialogueText Code">
+                    <h3 class="content__game4">The function updateDialogueText updates the dialogue Widget that appears on screen to display the dialogue and options. It clears out any current dialogue and dialogue options children within the dialogue widget, displays the new speaker dialogue text, and then creates new dialogue options for each of the new ones within the options. Overall, this uses two Widgets W_Dialogue and W_DialogueOptions. </h3>
+
+
+                    <h3 class="content__game4">Painting System</h3>
+                    <h3 class="content__game4">Another interesting system I built, guided by videos from UnrealUniversity, was the canvas painting system for the painting minigame. For this minigame I wanted the player to be able to select paint cans to change their brush color and hold down a button while pointed at a canvas to paint with that color.</h3>
+                    <img class="content__photo7" src="../assets/images/paintsystem1.jpg" alt="paint system 1 Code">
+                    <h3 class="content__game4">After talking to the Painting Spider NPC, the paintbrush widget is added to the viewport. Now with a right mouse click on the paint can actors, the color of the brush will be updated. When the paint can actor that has its associated color name is clicked the brush texture 2D texture variable is updated to match with the associated color. The GetForwardVector componenet with an input of 1500.0 allows for the actor paint can to be clicked for a far away distance so they do not have to fly super close to the can to change colors. </h3>
+                    <img class="content__photo7" src="../assets/images/paintsystem2.jpg" alt="paint system 2 Code">
+                    <h3 class="content__game4">Then with a left mouse click if the brush is pointed at the canvas actor the brush color will be painted onto the canvas at the location the brush is pointing.  </h3>
+                    <img class="content__photo7" src="../assets/images/drawBrush.jpg" alt="paint system 2 Code">
+                    <h3 class="content__game4">On the canvas, based on the associated texture the material is set and the Begin Draw Canvas To Render Target is used with Draw Material to draw the color material at the brush location on the canvas. FindCollisionUV was used to set the drawlocation.</h3>
+
+
         </section>
 
     
